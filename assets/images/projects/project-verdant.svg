@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none" role="img">
+  <defs>
+    <filter id="grain-verdant" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="shadow-verdant" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    
+    <linearGradient id="verdant-p1" x1="68" y1="496" x2="252" y2="584" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE8CE"/><stop offset="1" stop-color="#B9D0A3"/>
+    </linearGradient>
+    <linearGradient id="verdant-p2" x1="300" y1="496" x2="484" y2="584" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E3EBD6"/><stop offset="1" stop-color="#C6DAB2"/>
+    </linearGradient>
+
+  </defs>
+  
+  <rect width="1200" height="800" fill="#E7EEE1"/>
+  <circle cx="1080" cy="120" r="330" fill="#C7DDB6" opacity=".8"/>
+  <circle cx="100" cy="720" r="360" fill="#DDE8CE"/>
+  
+  <g filter="url(#shadow-verdant)">
+    <rect x="60" y="58" width="1080" height="684" rx="20" fill="#F6F8F1"/>
+  </g>
+  <rect x="60" y="58" width="1080" height="684" rx="20" fill="none" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M60 102h1080" stroke="#fff" stroke-opacity=".10"/>
+  <circle cx="86" cy="80" r="5" fill="#FF6157" fill-opacity=".85"/>
+  <circle cx="104" cy="80" r="5" fill="#FEBC2E" fill-opacity=".85"/>
+  <circle cx="122" cy="80" r="5" fill="#28C840" fill-opacity=".85"/>
+  <rect x="450" y="71" width="300" height="18" rx="9" fill="#fff" fill-opacity=".07"/>
+  <text x="600" y="84" text-anchor="middle" fill="#fff" fill-opacity=".36" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing=".8">lumen.studio</text>
+  <g transform="translate(60, 102)">
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+      <text x="52" y="54" fill="#183D2A" font-family="Georgia, 'Times New Roman', serif" font-size="24" letter-spacing="1">VERDANT</text>
+      <g fill="#47634F" font-size="11.5" font-weight="500">
+        <text x="430" y="54">Shop</text><text x="490" y="54">Rituals</text><text x="560" y="54">Our roots</text><text x="646" y="54">Journal</text>
+      </g>
+      <rect x="838" y="28" width="128" height="38" rx="19" fill="#183D2A"/>
+      <text x="902" y="51" text-anchor="middle" fill="#F6F8F1" font-size="10.5" font-weight="600">Shop the ritual</text>
+      <text x="52" y="124" fill="#6A8266" font-size="9.5" font-weight="600" letter-spacing="2.4">BOTANICAL SKINCARE — SMALL BATCH</text>
+      <text x="52" y="214" fill="#183D2A" font-family="Georgia, 'Times New Roman', serif" font-size="76" letter-spacing="-2.6">Rooted in</text>
+      <text x="52" y="292" fill="#183D2A" font-family="Georgia, 'Times New Roman', serif" font-size="76" letter-spacing="-2.6">better <tspan fill="#4F7B4C" font-style="italic">care.</tspan></text>
+      <text x="54" y="340" fill="#5A7058" font-size="13.5">Plant-powered formulas for skin that thrives.</text>
+      <text x="54" y="362" fill="#5A7058" font-size="13.5">Nothing hidden. Nothing wasted.</text>
+      <rect x="52" y="398" width="148" height="46" rx="23" fill="#183D2A"/>
+      <text x="126" y="426" text-anchor="middle" fill="#F6F8F1" font-size="11" font-weight="600">Explore products</text>
+      <text x="226" y="426" fill="#183D2A" font-size="11" font-weight="600">Our ingredients ↗</text>
+      <g>
+        <circle cx="846" cy="258" r="162" fill="#D7E5C8"/>
+        <circle cx="846" cy="258" r="128" fill="none" stroke="#A9C293" stroke-width="1" stroke-dasharray="2 7"/>
+        <path d="M792 318c-14-58 22-118 82-140 8 62-22 118-82 140Z" fill="#4F7B4C"/>
+        <path d="M806 298c22-42 44-64 62-82" stroke="#D7E5C8" stroke-width="2" stroke-linecap="round"/>
+        <path d="M874 194c48 10 78 56 68 108-44 2-74-34-68-108Z" fill="#83A86A"/>
+        <path d="M894 222c18 20 30 42 34 62" stroke="#D7E5C8" stroke-width="1.6" stroke-linecap="round"/>
+        <rect x="760" y="344" width="180" height="56" rx="28" fill="#F6F8F1"/>
+        <circle cx="790" cy="372" r="14" fill="#183D2A"/>
+        <path d="M784 372l4 4 8-9" stroke="#F6F8F1" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="814" y="368" fill="#183D2A" font-size="9.5" font-weight="600">Certified organic</text>
+        <text x="814" y="381" fill="#7A8F75" font-size="8">COSMOS standard</text>
+      </g>
+      <g>
+        <rect x="52" y="480" width="216" height="160" rx="14" fill="#EEF3E8" stroke="#D3E0C7"/>
+        <rect x="68" y="496" width="184" height="88" rx="8" fill="url(#verdant-p1)"/>
+        <rect x="128" y="512" width="64" height="72" rx="10" fill="#183D2A" fill-opacity=".88"/>
+        <rect x="148" y="498" width="24" height="16" rx="3" fill="#83A86A"/>
+        <text x="68" y="608" fill="#183D2A" font-size="10" font-weight="600">Forest Dew Serum</text>
+        <text x="68" y="625" fill="#7A8F75" font-size="8.5">30ml · $48</text>
+        <rect x="284" y="480" width="216" height="160" rx="14" fill="#EEF3E8" stroke="#D3E0C7"/>
+        <rect x="300" y="496" width="184" height="88" rx="8" fill="url(#verdant-p2)"/>
+        <rect x="366" y="514" width="52" height="70" rx="8" fill="#183D2A" fill-opacity=".88"/>
+        <rect x="382" y="500" width="20" height="16" rx="3" fill="#83A86A"/>
+        <text x="300" y="608" fill="#183D2A" font-size="10" font-weight="600">Moss Body Oil</text>
+        <text x="300" y="625" fill="#7A8F75" font-size="8.5">100ml · $36</text>
+      </g>
+      <g>
+        <rect x="540" y="480" width="456" height="160" rx="14" fill="#183D2A"/>
+        <text x="566" y="516" fill="#A9C293" font-size="8.5" letter-spacing="2">FROM OUR JOURNAL</text>
+        <text x="566" y="556" fill="#F6F8F1" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="-.6">The slow ritual of</text>
+        <text x="566" y="588" fill="#F6F8F1" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="-.6">morning skincare.</text>
+        <circle cx="934" cy="560" r="28" fill="#A9C293"/>
+        <path d="M926 560h16M934 552l8 8-8 8" stroke="#183D2A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="566" y="620" fill="#9DB398" font-size="8.5">4 min read · 12 June</text>
+      </g>
+    </g>
+  </g>
+
+  <rect width="1200" height="800" filter="url(#grain-verdant)" opacity=".045" style="mix-blend-mode:overlay"/>
+</svg>

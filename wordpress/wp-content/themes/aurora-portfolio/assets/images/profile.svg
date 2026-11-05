@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" fill="none" role="img" aria-labelledby="profileTitle profileDesc">
+  <title id="profileTitle">Illustrated portrait placeholder</title>
+  <desc id="profileDesc">A stylised illustrated portrait of a developer in a dark violet and cyan palette. Replace with a real photograph before publishing.</desc>
+  <defs>
+    <linearGradient id="p-bg" x1="0" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171034"/><stop offset=".55" stop-color="#0D1226"/><stop offset="1" stop-color="#080B16"/>
+    </linearGradient>
+    <linearGradient id="p-skin" x1="300" y1="280" x2="560" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A2352"/><stop offset=".6" stop-color="#1B2242"/><stop offset="1" stop-color="#121A34"/>
+    </linearGradient>
+    <linearGradient id="p-hood" x1="220" y1="600" x2="620" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B1D5C"/><stop offset=".5" stop-color="#191436"/><stop offset="1" stop-color="#0E1024"/>
+    </linearGradient>
+    <linearGradient id="p-rim" x1="520" y1="260" x2="620" y2="660" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity=".9"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="p-accent" x1="140" y1="160" x2="660" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/><stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="p-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+    <filter id="p-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2"/><feColorMatrix type="saturate" values="0"/></filter>
+    <filter id="p-shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#000" flood-opacity=".45"/></filter>
+  </defs>
+  <rect width="800" height="1000" rx="36" fill="url(#p-bg)"/>
+  <circle cx="620" cy="230" r="230" fill="#8B5CF6" opacity=".38" filter="url(#p-blur)"/>
+  <circle cx="160" cy="820" r="240" fill="#06B6D4" opacity=".22" filter="url(#p-blur)"/>
+  <g opacity=".18" stroke="#A78BFA" stroke-width="1">
+    <path d="M0 200h800M0 400h800M0 600h800M0 800h800M200 0v1000M400 0v1000M600 0v1000"/>
+  </g>
+  <circle cx="400" cy="460" r="252" stroke="#8B5CF6" stroke-opacity=".28" stroke-dasharray="2 12"/>
+  <circle cx="400" cy="460" r="300" stroke="#06B6D4" stroke-opacity=".14"/>
+  <g opacity=".5" fill="#A78BFA">
+    <circle cx="155" cy="330" r="3"/><circle cx="672" cy="520" r="2.5"/><circle cx="210" cy="640" r="2"/><circle cx="590" cy="150" r="2"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" fill="#fff" fill-opacity=".035" font-family="'Segoe UI', Arial, sans-serif" font-size="360" font-weight="700" letter-spacing="-20">IM</text>
+
+  <g filter="url(#p-shadow)">
+    <path d="M160 1000c0-176 86-286 240-286s240 110 240 286H160Z" fill="url(#p-hood)"/>
+    <path d="M240 968c4-130 54-212 160-212s156 82 160 212" stroke="#8B5CF6" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M308 726c8 48 36 78 92 78s84-30 92-78" fill="#151B35"/>
+    <path d="M304 646c-4 72 26 118 96 118s100-46 96-118v-112H304v112Z" fill="url(#p-skin)"/>
+    <path d="M300 546c0-112 44-186 100-186s100 74 100 186v92c0 82-44 134-100 134s-100-52-100-134v-92Z" fill="url(#p-skin)"/>
+    <path d="M292 532c10-104 56-174 110-174 60 0 98 68 106 174-20-44-50-70-94-78-42-8-84 12-122 78Z" fill="#0E1329"/>
+    <path d="M302 452c18-60 58-92 106-92 50 0 88 30 104 88-26-28-60-42-104-42-42 0-78 14-106 46Z" fill="#1A1238"/>
+    <path d="M478 420c18 34 24 72 20 116" stroke="url(#p-rim)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M294 444c-6 76 2 136 22 184" stroke="#8B5CF6" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+    <g>
+      <rect x="326" y="548" width="66" height="48" rx="16" stroke="#22D3EE" stroke-opacity=".85" stroke-width="2.5" fill="#06B6D4" fill-opacity=".06"/>
+      <rect x="408" y="548" width="66" height="48" rx="16" stroke="#22D3EE" stroke-opacity=".85" stroke-width="2.5" fill="#06B6D4" fill-opacity=".06"/>
+      <path d="M392 566c5-4 11-4 16 0M326 564c-6-2-12 1-14 6" stroke="#22D3EE" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+      <rect x="342" y="564" width="36" height="18" rx="7" fill="#22D3EE" fill-opacity=".1"/>
+      <rect x="422" y="564" width="36" height="18" rx="7" fill="#22D3EE" fill-opacity=".1"/>
+      <path d="M386 560l6-10" stroke="#22D3EE" stroke-opacity=".5" stroke-width="2"/>
+      <circle cx="346" cy="570" r="2.5" fill="#67E8F9"/><circle cx="426" cy="570" r="2.5" fill="#67E8F9"/>
+    </g>
+    <path d="M396 610c2 8 6 12 12 12s10-4 12-12" stroke="#22D3EE" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"/>
+    <path d="M368 664c20 10 42 10 62 0" stroke="#A78BFA" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+    <path d="M456 692c28 14 44 40 48 78" stroke="#22D3EE" stroke-opacity=".35" stroke-width="2"/>
+    <path d="M500 730c-10 30-6 70 14 100" stroke="#8B5CF6" stroke-opacity=".3" stroke-width="2"/>
+  </g>
+
+  <g>
+    <rect x="44" y="44" width="200" height="52" rx="26" fill="#0B1020" fill-opacity=".65" stroke="#fff" stroke-opacity=".12"/>
+    <circle cx="72" cy="70" r="5" fill="#34D399"/>
+    <circle cx="72" cy="70" r="10" stroke="#34D399" stroke-opacity=".3"/>
+    <text x="88" y="66" fill="#fff" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600">Available for work</text>
+    <text x="88" y="82" fill="#A1A1AA" font-family="'Segoe UI', Arial, sans-serif" font-size="9">Remote · worldwide</text>
+  </g>
+  <g>
+    <rect x="44" y="828" width="712" height="128" rx="24" fill="#0B1020" fill-opacity=".72" stroke="#fff" stroke-opacity=".12"/>
+    <text x="76" y="876" fill="#fff" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="-.4">Imran</text>
+    <text x="76" y="900" fill="#A1A1AA" font-family="'Segoe UI', Arial, sans-serif" font-size="11" letter-spacing="1.4">WEB DESIGNER &amp; WORDPRESS DEVELOPER</text>
+    <rect x="76" y="916" width="64" height="4" rx="2" fill="url(#p-accent)"/>
+    <g transform="translate(620 872)">
+      <circle cx="0" cy="0" r="18" fill="#8B5CF6" fill-opacity=".15" stroke="#8B5CF6" stroke-opacity=".4"/>
+      <path d="M-5 1l4 4 7-9" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="652" y="876" fill="#fff" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600">5+ years</text>
+    <text x="652" y="890" fill="#A1A1AA" font-family="'Segoe UI', Arial, sans-serif" font-size="8">crafting the web</text>
+  </g>
+  <rect x="44" y="944" width="712" height="1" fill="#fff" fill-opacity=".08"/>
+  <text x="44" y="972" fill="#A1A1AA" fill-opacity=".7" font-family="'Segoe UI', Arial, sans-serif" font-size="9" letter-spacing="1.6">PORTFOLIO / 2026</text>
+  <text x="756" y="972" text-anchor="end" fill="#A1A1AA" fill-opacity=".7" font-family="'Segoe UI', Arial, sans-serif" font-size="9" letter-spacing="1.6">DESIGN × CODE</text>
+  <rect width="800" height="1000" rx="36" filter="url(#p-grain)" opacity=".045" style="mix-blend-mode:overlay"/>
+</svg>

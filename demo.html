@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concept project demo — Imran</title>
+  <meta name="description" content="Interactive concept project demos and representative source code by Imran, web designer and WordPress developer.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="author" content="Imran">
+  <meta name="theme-color" content="#06070C">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/demo.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body class="demo-page">
+  <a class="skip-link" href="#main">Skip to demo</a>
+
+  <!-- =========================================================
+       SVG ICON SPRITE
+       ========================================================= -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-monitor" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24"><path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5L10 13l-6.5-2L10 9l2-6.5Z" fill="currentColor"/></symbol>
+    <symbol id="icon-quote" viewBox="0 0 24 24"><path d="M9.5 6C6.4 7.4 4.5 10 4.5 13.2c0 2.6 1.5 4.3 3.7 4.3 2 0 3.5-1.5 3.5-3.5 0-1.9-1.3-3.3-3.1-3.3-.3 0-.7 0-1 .1.4-1.4 1.5-2.6 3.1-3.4L9.5 6Zm9 0c-3.1 1.4-5 4-5 7.2 0 2.6 1.5 4.3 3.7 4.3 2 0 3.5-1.5 3.5-3.5 0-1.9-1.3-3.3-3.1-3.3-.3 0-.7 0-1 .1.4-1.4 1.5-2.6 3.1-3.4L18.5 6Z" fill="currentColor"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.35.78 1.05.78 2.12v3.14c0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- =========================================================
+       CONCEPT TOOLBAR — stays pinned while the demo scrolls
+       ========================================================= -->
+  <header class="demo-bar">
+    <div class="demo-bar__inner">
+      <a class="demo-bar__back" href="index.html#projects">
+        <svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+        <span>Portfolio</span>
+      </a>
+
+      <div class="demo-bar__context">
+        <span class="demo-bar__flag"><i></i> Concept project</span>
+        <span class="demo-bar__divider" aria-hidden="true"></span>
+        <span class="demo-bar__current" id="bar-project">Lumen Studio</span>
+        <span class="demo-bar__category" id="bar-category">WordPress · Custom Theme</span>
+      </div>
+
+      <div class="demo-bar__controls">
+        <div class="demo-switcher" role="group" aria-label="Switch concept project">
+          <button class="demo-switcher__arrow" type="button" data-project-step="-1" aria-label="Previous concept project">
+            <svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg>
+          </button>
+          <div class="demo-switcher__select">
+            <label class="visually-hidden" for="project-select">Choose a concept project</label>
+            <select id="project-select"></select>
+            <svg class="demo-switcher__chevron" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+          </div>
+          <button class="demo-switcher__arrow" type="button" data-project-step="1" aria-label="Next concept project">
+            <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+          </button>
+        </div>
+
+        <div class="demo-tabs" role="tablist" aria-label="Demo view">
+          <button class="demo-tab is-active" type="button" role="tab" id="tab-demo" aria-selected="true" aria-controls="demo-panel" data-view="demo">
+            <svg aria-hidden="true"><use href="#icon-monitor"></use></svg>
+            <span>Demo</span>
+          </button>
+          <button class="demo-tab" type="button" role="tab" id="tab-code" aria-selected="false" aria-controls="code-panel" data-view="code" tabindex="-1">
+            <svg aria-hidden="true"><use href="#icon-code"></use></svg>
+            <span>Source</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="demo-stage" id="main">
+    <!-- LIVE DEMO VIEW -->
+    <section class="demo-panel" id="demo-panel" role="tabpanel" aria-labelledby="tab-demo" data-panel="demo">
+      <div class="demo-browser">
+        <div class="demo-browser__chrome">
+          <div class="demo-browser__dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="demo-browser__address">
+            <svg aria-hidden="true"><use href="#icon-lock"></use></svg>
+            <span id="demo-url">imran.dev/demo/lumen</span>
+          </div>
+          <span class="demo-browser__badge">Self-initiated</span>
+        </div>
+
+        <div class="demo-frame" id="demo-frame" tabindex="0" aria-label="Concept website preview. Scroll inside this panel to explore the demo.">
+          <div class="demo-app" id="demo-app" data-mode="light" data-serif="true">
+            <div class="demo-loading" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOURCE VIEW -->
+    <section class="demo-panel code-panel" id="code-panel" role="tabpanel" aria-labelledby="tab-code" data-panel="code" hidden>
+      <div class="code-shell">
+        <div class="code-shell__head">
+          <div class="code-file">
+            <span class="code-file__icon"><svg aria-hidden="true"><use href="#icon-code"></use></svg></span>
+            <span class="code-file__text">
+              <span class="code-file__name" id="code-filename">inc/project-cards.php</span>
+              <span class="code-file__meta">Representative excerpt · <span id="code-language">PHP</span></span>
+            </span>
+          </div>
+          <button class="code-copy" type="button" id="copy-code">
+            <svg aria-hidden="true"><use href="#icon-copy"></use></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+        <div class="code-shell__body">
+          <pre class="code-block" tabindex="0" aria-label="Source code excerpt"><code id="code-content"></code></pre>
+        </div>
+        <div class="code-shell__foot">
+          <svg aria-hidden="true"><use href="#icon-sparkle"></use></svg>
+          <p>An illustrative excerpt from a self-initiated concept build — not a client deliverable.</p>
+        </div>
+      </div>
+    </section>
+
+    <noscript>
+      <div class="demo-noscript">
+        <h2>This interactive demo needs JavaScript</h2>
+        <p>The live concept previews and code viewer are rendered in the browser. You can still browse the project previews and contact details on the main portfolio.</p>
+        <a class="demo-noscript__link" href="index.html#projects">View the project previews <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+      </div>
+    </noscript>
+
+    <!-- CONCEPT DETAILS -->
+    <section class="demo-details" aria-labelledby="details-heading">
+      <div class="demo-details__intro">
+        <span class="demo-details__eyebrow"><svg aria-hidden="true"><use href="#icon-sparkle"></use></svg> About this concept</span>
+        <h2 id="details-heading"><span id="details-name">Lumen Studio</span><span class="demo-details__year" id="details-year">2026</span></h2>
+        <p id="details-text">A self-initiated concept website designed and built to explore a brand-led approach to WordPress. No real client, product or review is represented.</p>
+        <div class="demo-details__actions">
+          <a class="demo-details__cta" href="index.html#contact">
+            <svg aria-hidden="true"><use href="#icon-mail"></use></svg>
+            Discuss a similar project
+          </a>
+          <a class="demo-details__ghost" href="index.html#projects">
+            All projects
+          </a>
+        </div>
+      </div>
+
+      <dl class="demo-details__facts">
+        <div>
+          <dt>Project type</dt>
+          <dd id="details-category">WordPress · Custom Theme</dd>
+        </div>
+        <div>
+          <dt>Concept focus</dt>
+          <dd id="details-focus">Brand-led design</dd>
+        </div>
+        <div>
+          <dt>Built with</dt>
+          <dd id="details-stack">WordPress · PHP · CSS · JavaScript</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>Self-initiated concept</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- PROJECT PAGER -->
+    <nav class="demo-pager" aria-label="Concept project pagination">
+      <a class="demo-pager__link demo-pager__link--prev" id="pager-prev" href="demo.html?id=atelier">
+        <span class="demo-pager__direction"><svg aria-hidden="true"><use href="#icon-arrow-left"></use></svg> Previous</span>
+        <span class="demo-pager__name" data-pager-name>Atelier North</span>
+      </a>
+      <a class="demo-pager__link demo-pager__link--next" id="pager-next" href="demo.html?id=nomad">
+        <span class="demo-pager__direction">Next <svg aria-hidden="true"><use href="#icon-arrow-right"></use></svg></span>
+        <span class="demo-pager__name" data-pager-name>Nomad Supply</span>
+      </a>
+    </nav>
+
+    <footer class="demo-foot">
+      <p>All six projects are self-initiated concepts created for this portfolio. <a href="index.html#contact">Start a conversation</a> if you would like something similar for a real brand.</p>
+      <a class="demo-foot__top" href="#main">Back to top <svg aria-hidden="true"><use href="#icon-arrow-up-right"></use></svg></a>
+    </footer>
+  </main>
+
+  <div class="demo-toast" id="demo-toast" role="status" aria-live="polite" aria-hidden="true">
+    <svg aria-hidden="true"><use href="#icon-check"></use></svg>
+    <span id="demo-toast-text">Copied to clipboard</span>
+  </div>
+
+  <p class="visually-hidden" id="demo-status" role="status" aria-live="polite"></p>
+
+  <script src="assets/js/projects-data.js" defer></script>
+  <script src="assets/js/demo.js" defer></script>
+</body>
+</html>

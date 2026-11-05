@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none" role="img">
+  <defs>
+    <filter id="grain-nomad" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="shadow-nomad" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    
+    <linearGradient id="nomad-hero" x1="640" y1="104" x2="1008" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D3B3E"/><stop offset=".5" stop-color="#09282A"/><stop offset="1" stop-color="#061719"/>
+    </linearGradient>
+    <linearGradient id="nomad-p1" x1="66" y1="484" x2="188" y2="572" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16494B"/><stop offset="1" stop-color="#0A2426"/>
+    </linearGradient>
+    <linearGradient id="nomad-p2" x1="232" y1="484" x2="354" y2="572" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D5A55"/><stop offset="1" stop-color="#0D2A2B"/>
+    </linearGradient>
+    <linearGradient id="nomad-p3" x1="398" y1="484" x2="520" y2="572" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#104349"/><stop offset="1" stop-color="#0A2022"/>
+    </linearGradient>
+
+  </defs>
+  
+  <rect width="1200" height="800" fill="#051416"/>
+  <circle cx="960" cy="180" r="440" fill="#0E4A4E" opacity=".75"/>
+  <circle cx="120" cy="720" r="380" fill="#0A3A40" opacity=".6"/>
+  
+  <g filter="url(#shadow-nomad)">
+    <rect x="60" y="58" width="1080" height="684" rx="20" fill="#081D1F"/>
+  </g>
+  <rect x="60" y="58" width="1080" height="684" rx="20" fill="none" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M60 102h1080" stroke="#fff" stroke-opacity=".10"/>
+  <circle cx="86" cy="80" r="5" fill="#FF6157" fill-opacity=".85"/>
+  <circle cx="104" cy="80" r="5" fill="#FEBC2E" fill-opacity=".85"/>
+  <circle cx="122" cy="80" r="5" fill="#28C840" fill-opacity=".85"/>
+  <rect x="450" y="71" width="300" height="18" rx="9" fill="#fff" fill-opacity=".07"/>
+  <text x="600" y="84" text-anchor="middle" fill="#fff" fill-opacity=".36" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing=".8">lumen.studio</text>
+  <g transform="translate(60, 102)">
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+      <text x="52" y="55" fill="#F1FFFC" font-size="22" font-weight="700" letter-spacing="5">NOMAD</text>
+      <g fill="#9CC6C2" font-size="11.5" font-weight="500">
+        <text x="400" y="54">Shop</text><text x="458" y="54">Collections</text><text x="556" y="54">Journal</text><text x="632" y="54">About</text>
+      </g>
+      <circle cx="900" cy="46" r="17" fill="#fff" fill-opacity=".07"/>
+      <path d="M894 40h12l-1.5 13h-9L894 40Z" stroke="#D9FFFA" stroke-width="1.4" stroke-linejoin="round"/>
+      <circle cx="899" cy="42" r="3.5" stroke="#D9FFFA" stroke-width="1.4"/>
+      <text x="942" y="50" fill="#9CC6C2" font-size="11">Search</text>
+      <rect x="52" y="106" width="212" height="30" rx="15" fill="#0FFFCF" fill-opacity=".08"/>
+      <circle cx="70" cy="121" r="3.5" fill="#21E6B4"/>
+      <text x="82" y="125" fill="#7FFFE2" font-size="9" font-weight="600" letter-spacing="1.4">NEW — ALPINE SERIES 04</text>
+      <text x="52" y="206" fill="#F1FFFC" font-size="58" font-weight="700" letter-spacing="-2.4">Gear for the</text>
+      <text x="52" y="268" fill="#F1FFFC" font-size="58" font-weight="700" letter-spacing="-2.4">long way <tspan fill="#21E6B4">round.</tspan></text>
+      <text x="54" y="314" fill="#8FB8B4" font-size="13.5">Weatherproof essentials, made for the trail</text>
+      <text x="54" y="336" fill="#8FB8B4" font-size="13.5">and designed for everywhere in between.</text>
+      <rect x="52" y="374" width="152" height="46" rx="23" fill="#21E6B4"/>
+      <text x="128" y="402" text-anchor="middle" fill="#05201B" font-size="11.5" font-weight="700">Shop the series</text>
+      <rect x="218" y="374" width="152" height="46" rx="23" fill="none" stroke="#fff" stroke-opacity=".2"/>
+      <text x="294" y="402" text-anchor="middle" fill="#D9FFFA" font-size="11.5" font-weight="600">Our story</text>
+      <g>
+        <rect x="52" y="470" width="150" height="160" rx="16" fill="#0B2A2C" stroke="#fff" stroke-opacity=".08"/>
+        <rect x="66" y="484" width="122" height="88" rx="10" fill="url(#nomad-p1)"/>
+        <path d="M104 514h52c8 0 14 6 14 14v22c0 8-6 14-14 14h-52c-8 0-14-6-14-14v-22c0-8 6-14 14-14Z" fill="#0B1A1B" stroke="#21E6B4" stroke-opacity=".5"/>
+        <path d="M112 514v-8c0-10 8-18 18-18s18 8 18 18v8" stroke="#21E6B4" stroke-opacity=".55" stroke-width="3"/>
+        <text x="66" y="604" fill="#F1FFFC" font-size="11" font-weight="600">Trail Pack 32L</text>
+        <text x="66" y="621" fill="#6F9A96" font-size="9.5">$168.00</text>
+        <rect x="218" y="470" width="150" height="160" rx="16" fill="#0B2A2C" stroke="#fff" stroke-opacity=".08"/>
+        <rect x="232" y="484" width="122" height="88" rx="10" fill="url(#nomad-p2)"/>
+        <path d="M272 500h42v56h-42z" rx="8" fill="#0B1A1B" stroke="#21E6B4" stroke-opacity=".35"/>
+        <path d="M272 518h42M272 536h42" stroke="#21E6B4" stroke-opacity=".35"/>
+        <text x="232" y="604" fill="#F1FFFC" font-size="11" font-weight="600">Shell Jacket</text>
+        <text x="232" y="621" fill="#6F9A96" font-size="9.5">$240.00</text>
+        <rect x="384" y="470" width="150" height="160" rx="16" fill="#0B2A2C" stroke="#fff" stroke-opacity=".08"/>
+        <rect x="398" y="484" width="122" height="88" rx="10" fill="url(#nomad-p3)"/>
+        <circle cx="459" cy="528" r="28" fill="#0B1A1B" stroke="#21E6B4" stroke-opacity=".35"/>
+        <path d="M445 528h28M459 514v28" stroke="#21E6B4" stroke-opacity=".45"/>
+        <text x="398" y="604" fill="#F1FFFC" font-size="11" font-weight="600">Field Bottle</text>
+        <text x="398" y="621" fill="#6F9A96" font-size="9.5">$42.00</text>
+      </g>
+      <g>
+        <rect x="640" y="104" width="368" height="526" rx="22" fill="url(#nomad-hero)" stroke="#fff" stroke-opacity=".12"/>
+        <circle cx="824" cy="300" r="132" fill="#0B1A1B" opacity=".55"/>
+        <path d="M760 246h122c14 0 26 12 26 26v150c0 16-12 28-28 28H762c-16 0-28-12-28-28V272c0-14 12-26 26-26Z" fill="#102E30" stroke="#21E6B4" stroke-opacity=".45" stroke-width="1.4"/>
+        <path d="M762 246v-22c0-36 28-64 64-64s64 28 64 64v22" stroke="#21E6B4" stroke-opacity=".55" stroke-width="6"/>
+        <path d="M770 300h122M770 330h80" stroke="#21E6B4" stroke-opacity=".38" stroke-width="3" stroke-linecap="round"/>
+        <rect x="668" y="524" width="160" height="66" rx="14" fill="#061D1E" fill-opacity=".86" stroke="#fff" stroke-opacity=".1"/>
+        <text x="686" y="552" fill="#F1FFFC" font-size="10" font-weight="700">Alpine Series 04</text>
+        <text x="686" y="570" fill="#6F9A96" font-size="9">Limited run · 120 units</text>
+        <rect x="832" y="544" width="112" height="26" rx="13" fill="#21E6B4"/>
+        <text x="888" y="561" text-anchor="middle" fill="#05201B" font-size="8.5" font-weight="700">EXPLORE</text>
+        <circle cx="962" cy="152" r="34" fill="#061D1E" fill-opacity=".8" stroke="#21E6B4" stroke-opacity=".35"/>
+        <text x="962" y="149" text-anchor="middle" fill="#21E6B4" font-size="8" letter-spacing="1">FREE</text>
+        <text x="962" y="162" text-anchor="middle" fill="#D9FFFA" font-size="8" letter-spacing="1">SHIP</text>
+      </g>
+      <rect x="640" y="654" width="368" height="1" fill="#fff" fill-opacity=".1"/>
+      <text x="640" y="682" fill="#6F9A96" font-size="9" letter-spacing="1.6">CARBON NEUTRAL SHIPPING</text>
+      <text x="848" y="682" fill="#6F9A96" font-size="9" letter-spacing="1.6">LIFETIME REPAIRS</text>
+    </g>
+  </g>
+
+  <rect width="1200" height="800" filter="url(#grain-nomad)" opacity=".045" style="mix-blend-mode:overlay"/>
+</svg>

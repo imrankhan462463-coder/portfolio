@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none" role="img">
+  <defs>
+    <filter id="grain-framecast" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="shadow-framecast" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    
+    <linearGradient id="fc-mark" x1="26" y1="28" x2="50" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#F472B6"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+    <linearGradient id="fc-banner" x1="728" y1="86" x2="980" y2="182" gradientUnits="userSpaceOnUse"><stop stop-color="#F472B6" stop-opacity=".2"/><stop offset="1" stop-color="#22D3EE" stop-opacity=".06"/></linearGradient>
+    <linearGradient id="fc-f1" x1="234" y1="242" x2="446" y2="358" gradientUnits="userSpaceOnUse"><stop stop-color="#3A1D45"/><stop offset="1" stop-color="#191026"/></linearGradient>
+    <linearGradient id="fc-f2" x1="488" y1="242" x2="700" y2="358" gradientUnits="userSpaceOnUse"><stop stop-color="#143A46"/><stop offset="1" stop-color="#0C1E26"/></linearGradient>
+    <linearGradient id="fc-f3" x1="742" y1="242" x2="966" y2="358" gradientUnits="userSpaceOnUse"><stop stop-color="#3B2331"/><stop offset="1" stop-color="#1C1119"/></linearGradient>
+
+  </defs>
+  
+  <rect width="1200" height="800" fill="#08060F"/>
+  <circle cx="1020" cy="100" r="380" fill="#3A1450" opacity=".8"/>
+  <circle cx="120" cy="740" r="340" fill="#082F3A" opacity=".7"/>
+  
+  <g filter="url(#shadow-framecast)">
+    <rect x="60" y="58" width="1080" height="684" rx="20" fill="#0B0914"/>
+  </g>
+  <rect x="60" y="58" width="1080" height="684" rx="20" fill="none" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M60 102h1080" stroke="#fff" stroke-opacity=".10"/>
+  <circle cx="86" cy="80" r="5" fill="#FF6157" fill-opacity=".85"/>
+  <circle cx="104" cy="80" r="5" fill="#FEBC2E" fill-opacity=".85"/>
+  <circle cx="122" cy="80" r="5" fill="#28C840" fill-opacity=".85"/>
+  <rect x="450" y="71" width="300" height="18" rx="9" fill="#fff" fill-opacity=".07"/>
+  <text x="600" y="84" text-anchor="middle" fill="#fff" fill-opacity=".36" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing=".8">lumen.studio</text>
+  <g transform="translate(60, 102)">
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+      <rect x="0" y="0" width="1080" height="640" fill="#0B0914"/>
+      <rect x="0" y="0" width="190" height="640" fill="#0D0B18"/>
+      <path d="M190 0v640" stroke="#fff" stroke-opacity=".07"/>
+      <circle cx="38" cy="40" r="12" fill="url(#fc-mark)"/>
+      <path d="M33 40h10M38 35v10" stroke="#0B0914" stroke-width="1.6"/>
+      <text x="58" y="45" fill="#F4F1FF" font-size="14" font-weight="700">FrameCast</text>
+      <text x="58" y="58" fill="#6D6786" font-size="7">v2.4.0</text>
+      <g font-size="10" fill="#77718F">
+        <text x="24" y="104">Dashboard</text><text x="24" y="136">Frames</text><text x="24" y="168">Collections</text><text x="24" y="200">Exports</text>
+        <text x="24" y="248">TEAM</text><text x="24" y="280">Anna</text><text x="24" y="312">Marcus</text>
+      </g>
+      <rect x="14" y="84" width="162" height="34" rx="8" fill="#F472B6" fill-opacity=".1"/>
+      <text x="24" y="104" fill="#FFB8D9" font-size="10">Dashboard</text>
+      <circle cx="28" cy="280" r="6" fill="#F472B6"/><circle cx="28" cy="312" r="6" fill="#22D3EE"/>
+      <rect x="16" y="550" width="158" height="68" rx="10" fill="#141020" stroke="#fff" stroke-opacity=".07"/>
+      <text x="28" y="574" fill="#D9D4E8" font-size="8.5" font-weight="600">Storage</text>
+      <rect x="28" y="584" width="134" height="5" rx="2.5" fill="#241E33"/>
+      <rect x="28" y="584" width="92" height="5" rx="2.5" fill="#F472B6"/>
+      <text x="28" y="606" fill="#77718F" font-size="7">3.2 GB of 5 GB used</text>
+
+      <text x="220" y="40" fill="#F4F1FF" font-size="16" font-weight="700">Dashboard</text>
+      <text x="220" y="58" fill="#6D6786" font-size="8.5">Wednesday, 24 June</text>
+      <rect x="770" y="20" width="34" height="30" rx="8" fill="#141020" stroke="#fff" stroke-opacity=".08"/>
+      <circle cx="787" cy="35" r="5" fill="none" stroke="#A29BB8" stroke-width="1.3"/>
+      <path d="M791 39l4 4" stroke="#A29BB8" stroke-width="1.3"/>
+      <circle cx="834" cy="35" r="13" fill="#F472B6" fill-opacity=".18" stroke="#F472B6" stroke-opacity=".3"/>
+      <text x="834" y="39" text-anchor="middle" fill="#FFB8D9" font-size="8">AK</text>
+      <rect x="858" y="20" width="122" height="30" rx="15" fill="#F472B6"/>
+      <text x="919" y="39" text-anchor="middle" fill="#240B16" font-size="9" font-weight="700">+ New frame</text>
+
+      <g>
+        <rect x="220" y="86" width="240" height="96" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+        <text x="238" y="112" fill="#6D6786" font-size="8" letter-spacing="1">TOTAL FRAMES</text>
+        <text x="238" y="148" fill="#F4F1FF" font-size="26" font-weight="700" letter-spacing="-1">1,284</text>
+        <rect x="238" y="160" width="48" height="15" rx="7" fill="#22D3EE" fill-opacity=".12"/>
+        <text x="262" y="170" text-anchor="middle" fill="#67E8F9" font-size="7">+18.2%</text>
+        <rect x="474" y="86" width="240" height="96" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+        <text x="492" y="112" fill="#6D6786" font-size="8" letter-spacing="1">EXPORTS</text>
+        <text x="492" y="148" fill="#F4F1FF" font-size="26" font-weight="700" letter-spacing="-1">8,492</text>
+        <rect x="492" y="160" width="48" height="15" rx="7" fill="#F472B6" fill-opacity=".12"/>
+        <text x="516" y="170" text-anchor="middle" fill="#FFB8D9" font-size="7">+9.4%</text>
+        <rect x="728" y="86" width="252" height="96" rx="12" fill="url(#fc-banner)" stroke="#F472B6" stroke-opacity=".25"/>
+        <text x="748" y="112" fill="#FFD4E8" font-size="8" letter-spacing="1">PRO TIP</text>
+        <text x="748" y="136" fill="#FFF" font-size="11" font-weight="600">Batch export is now live</text>
+        <text x="748" y="152" fill="#E8B8CE" font-size="8">Export every frame in one click →</text>
+      </g>
+
+      <text x="220" y="212" fill="#F4F1FF" font-size="11" font-weight="600">Recent frames</text>
+      <text x="920" y="212" fill="#F472B6" font-size="8.5" font-weight="600">View all</text>
+      <g>
+        <rect x="220" y="228" width="240" height="176" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+        <rect x="234" y="242" width="212" height="116" rx="8" fill="url(#fc-f1)"/>
+        <circle cx="340" cy="300" r="34" fill="#0B0914" fill-opacity=".35"/>
+        <path d="M328 288h24c4 0 8 4 8 8v14c0 4-4 8-8 8h-24c-4 0-8-4-8-8v-14c0-4 4-8 8-8Z" fill="#F472B6" fill-opacity=".8"/>
+        <path d="M332 288v-5c0-5 4-9 8-9s8 4 8 9v5" stroke="#FFD4E8" stroke-width="2"/>
+        <text x="234" y="380" fill="#E4DFF0" font-size="9" font-weight="600">Product mockup — 01</text>
+        <text x="234" y="394" fill="#6D6786" font-size="7.5">Edited 2h ago</text>
+        <rect x="474" y="228" width="240" height="176" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+        <rect x="488" y="242" width="212" height="116" rx="8" fill="url(#fc-f2)"/>
+        <circle cx="594" cy="300" r="34" fill="#0B0914" fill-opacity=".3"/>
+        <path d="M580 288h28v24h-28z" stroke="#67E8F9" stroke-opacity=".7" stroke-width="2"/>
+        <path d="M588 288v-6h12v6" stroke="#67E8F9" stroke-opacity=".7" stroke-width="2"/>
+        <text x="488" y="380" fill="#E4DFF0" font-size="9" font-weight="600">Campaign — Aurora</text>
+        <text x="488" y="394" fill="#6D6786" font-size="7.5">Edited yesterday</text>
+        <rect x="728" y="228" width="252" height="176" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+        <rect x="742" y="242" width="224" height="116" rx="8" fill="url(#fc-f3)"/>
+        <circle cx="854" cy="300" r="30" fill="#0B0914" fill-opacity=".28"/>
+        <path d="M844 288h20v24h-20z" stroke="#F9A8D4" stroke-width="2"/>
+        <path d="M840 312l10-10 8 8 6-4 10 12" stroke="#F9A8D4" stroke-width="1.6" stroke-linecap="round"/>
+        <text x="742" y="380" fill="#E4DFF0" font-size="9" font-weight="600">Social kit — Spring</text>
+        <text x="742" y="394" fill="#6D6786" font-size="7.5">Edited 3d ago</text>
+      </g>
+
+      <rect x="220" y="428" width="760" height="188" rx="12" fill="#120E1E" stroke="#fff" stroke-opacity=".07"/>
+      <text x="240" y="456" fill="#E4DFF0" font-size="10" font-weight="600">Export activity</text>
+      <text x="932" y="456" fill="#6D6786" font-size="8">Last 7 days</text>
+      <g stroke="#fff" stroke-opacity=".05">
+        <path d="M240 492h720M240 528h720M240 564h720"/>
+      </g>
+      <g>
+        <rect x="250" y="520" width="26" height="64" rx="5" fill="#2A2038"/><rect x="250" y="550" width="26" height="34" rx="5" fill="#F472B6"/>
+        <rect x="308" y="504" width="26" height="80" rx="5" fill="#2A2038"/><rect x="308" y="534" width="26" height="50" rx="5" fill="#F472B6"/>
+        <rect x="366" y="536" width="26" height="48" rx="5" fill="#2A2038"/><rect x="366" y="558" width="26" height="26" rx="5" fill="#22D3EE"/>
+        <rect x="424" y="490" width="26" height="94" rx="5" fill="#2A2038"/><rect x="424" y="512" width="26" height="72" rx="5" fill="#22D3EE"/>
+        <rect x="482" y="514" width="26" height="70" rx="5" fill="#2A2038"/><rect x="482" y="544" width="26" height="40" rx="5" fill="#F472B6"/>
+        <rect x="540" y="478" width="26" height="106" rx="5" fill="#2A2038"/><rect x="540" y="500" width="26" height="84" rx="5" fill="#F472B6"/>
+        <rect x="598" y="496" width="26" height="88" rx="5" fill="#2A2038"/><rect x="598" y="524" width="26" height="60" rx="5" fill="#22D3EE"/>
+        <rect x="656" y="532" width="26" height="52" rx="5" fill="#2A2038"/><rect x="656" y="556" width="26" height="28" rx="5" fill="#F472B6"/>
+        <rect x="714" y="486" width="26" height="98" rx="5" fill="#2A2038"/><rect x="714" y="514" width="26" height="70" rx="5" fill="#F472B6"/>
+        <rect x="772" y="508" width="26" height="76" rx="5" fill="#2A2038"/><rect x="772" y="534" width="26" height="50" rx="5" fill="#22D3EE"/>
+      </g>
+      <text x="240" y="604" fill="#6D6786" font-size="7">MON</text><text x="356" y="604" fill="#6D6786" font-size="7">WED</text><text x="472" y="604" fill="#6D6786" font-size="7">FRI</text><text x="588" y="604" fill="#6D6786" font-size="7">SUN</text>
+      <rect x="790" y="474" width="172" height="124" rx="10" fill="#171222" stroke="#fff" stroke-opacity=".07"/>
+      <text x="806" y="498" fill="#6D6786" font-size="7.5" letter-spacing="1">TOP FORMAT</text>
+      <text x="806" y="522" fill="#F4F1FF" font-size="12" font-weight="600">Instagram 4:5</text>
+      <text x="806" y="540" fill="#6D6786" font-size="7.5">42% of all exports</text>
+      <rect x="806" y="554" width="140" height="6" rx="3" fill="#2A2038"/>
+      <rect x="806" y="554" width="94" height="6" rx="3" fill="#F472B6"/>
+      <text x="806" y="580" fill="#FFB8D9" font-size="7.5">+14% this week</text>
+    </g>
+  </g>
+
+  <rect width="1200" height="800" filter="url(#grain-framecast)" opacity=".045" style="mix-blend-mode:overlay"/>
+</svg>

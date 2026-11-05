@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none" role="img">
+  <defs>
+    <filter id="grain-atelier" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="shadow-atelier" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+    
+    <linearGradient id="atelier-img1" x1="640" y1="96" x2="1028" y2="362" gradientUnits="userSpaceOnUse"><stop stop-color="#B79B7C"/><stop offset="1" stop-color="#7C5E42"/></linearGradient>
+    <linearGradient id="atelier-img2" x1="640" y1="380" x2="826" y2="498" gradientUnits="userSpaceOnUse"><stop stop-color="#C9B293"/><stop offset="1" stop-color="#9C7C58"/></linearGradient>
+    <linearGradient id="atelier-img3" x1="842" y1="380" x2="1028" y2="498" gradientUnits="userSpaceOnUse"><stop stop-color="#B0A48D"/><stop offset="1" stop-color="#817258"/></linearGradient>
+
+  </defs>
+  
+  <rect width="1200" height="800" fill="#EDE6DC"/>
+  <circle cx="1060" cy="700" r="360" fill="#E3C6A4" opacity=".5"/>
+  <circle cx="90" cy="90" r="300" fill="#F3E8D8" opacity=".8"/>
+  
+  <g filter="url(#shadow-atelier)">
+    <rect x="60" y="58" width="1080" height="684" rx="20" fill="#F7F2EA"/>
+  </g>
+  <rect x="60" y="58" width="1080" height="684" rx="20" fill="none" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M60 102h1080" stroke="#fff" stroke-opacity=".10"/>
+  <circle cx="86" cy="80" r="5" fill="#FF6157" fill-opacity=".85"/>
+  <circle cx="104" cy="80" r="5" fill="#FEBC2E" fill-opacity=".85"/>
+  <circle cx="122" cy="80" r="5" fill="#28C840" fill-opacity=".85"/>
+  <rect x="450" y="71" width="300" height="18" rx="9" fill="#fff" fill-opacity=".07"/>
+  <text x="600" y="84" text-anchor="middle" fill="#fff" fill-opacity=".36" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" letter-spacing=".8">lumen.studio</text>
+  <g transform="translate(60, 102)">
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+      <text x="52" y="50" fill="#241D17" font-family="Georgia, 'Times New Roman', serif" font-size="19" letter-spacing="3">ATELIER NORTH</text>
+      <g fill="#6F6255" font-size="10.5" font-weight="500">
+        <text x="790" y="50">Work</text><text x="842" y="50">Studio</text><text x="901" y="50">Journal</text><text x="965" y="50">Contact</text>
+      </g>
+      <path d="M52 80h976" stroke="#D8CCBD"/>
+      <text x="52" y="128" fill="#8C7A66" font-size="9" font-weight="600" letter-spacing="2.4">INTERIOR OBJECTS — COPENHAGEN</text>
+      <text x="52" y="228" fill="#241D17" font-family="Georgia, 'Times New Roman', serif" font-size="68" letter-spacing="-2.4">Objects with a</text>
+      <text x="52" y="298" fill="#241D17" font-family="Georgia, 'Times New Roman', serif" font-size="68" letter-spacing="-2.4">quiet <tspan fill="#B45309" font-style="italic">presence.</tspan></text>
+      <text x="54" y="344" fill="#6F6255" font-size="12.5">A considered collection of handcrafted furniture</text>
+      <text x="54" y="364" fill="#6F6255" font-size="12.5">and objects for the modern home.</text>
+      <rect x="52" y="398" width="150" height="44" rx="22" fill="#241D17"/>
+      <text x="127" y="425" text-anchor="middle" fill="#F7F2EA" font-size="10.5" font-weight="600">View collection</text>
+      <text x="222" y="425" fill="#241D17" font-size="10.5" font-weight="600">Our philosophy ↗</text>
+
+      <g>
+        <rect x="640" y="96" width="388" height="266" rx="4" fill="url(#atelier-img1)"/>
+        <rect x="640" y="96" width="388" height="266" rx="4" fill="none" stroke="#000" stroke-opacity=".07"/>
+        <path d="M780 310c0-40 18-94 54-112 36 18 54 72 54 112v22H780v-22Z" fill="#8C6A4A" opacity=".7"/>
+        <rect x="826" y="190" width="12" height="86" rx="6" fill="#5E4530" opacity=".8"/>
+        <rect x="1000" y="118" width="12" height="12" rx="6" fill="#F7F2EA"/>
+        <text x="660" y="134" fill="#F7F2EA" font-size="7.5" letter-spacing="1.8">COLLECTION 04</text>
+        <text x="660" y="344" fill="#F7F2EA" font-family="Georgia, 'Times New Roman', serif" font-size="20">The Arc Chair</text>
+        <rect x="640" y="380" width="186" height="118" rx="4" fill="url(#atelier-img2)"/>
+        <rect x="642" y="382" width="182" height="114" rx="3" fill="none" stroke="#000" stroke-opacity=".06"/>
+        <text x="656" y="480" fill="#F7F2EA" font-size="8" letter-spacing="1.2">OAK SERIES · 02</text>
+        <rect x="842" y="380" width="186" height="118" rx="4" fill="url(#atelier-img3)"/>
+        <circle cx="935" cy="432" r="34" fill="#D8C4AC" opacity=".7"/>
+        <path d="M900 474h70" stroke="#6F6255" stroke-width="1" opacity=".4"/>
+        <text x="858" y="480" fill="#F7F2EA" font-size="8" letter-spacing="1.2">STONE SERIES · 07</text>
+      </g>
+
+      <path d="M52 512h976" stroke="#D8CCBD"/>
+      <g>
+        <text x="52" y="544" fill="#8C7A66" font-size="8" letter-spacing="1.8">SELECTED WORK</text>
+        <rect x="52" y="560" width="200" height="74" rx="4" fill="#E7DACA"/>
+        <rect x="66" y="572" width="58" height="50" rx="2" fill="#C9A87F"/>
+        <text x="136" y="592" fill="#241D17" font-size="9" font-weight="600">Nordhavn House</text>
+        <text x="136" y="608" fill="#8C7A66" font-size="7.5">Residential · 2025</text>
+        <rect x="272" y="560" width="200" height="74" rx="4" fill="#E7DACA"/>
+        <rect x="286" y="572" width="58" height="50" rx="2" fill="#B9B29E"/>
+        <text x="356" y="592" fill="#241D17" font-size="9" font-weight="600">Forma Gallery</text>
+        <text x="356" y="608" fill="#8C7A66" font-size="7.5">Cultural · 2025</text>
+        <rect x="492" y="560" width="200" height="74" rx="4" fill="#E7DACA"/>
+        <rect x="506" y="572" width="58" height="50" rx="2" fill="#D3B99E"/>
+        <text x="576" y="592" fill="#241D17" font-size="9" font-weight="600">Kinfill Studio</text>
+        <text x="576" y="608" fill="#8C7A66" font-size="7.5">Workspace · 2024</text>
+        <rect x="712" y="560" width="316" height="74" rx="4" fill="#241D17"/>
+        <text x="732" y="590" fill="#F7F2EA" font-family="Georgia, 'Times New Roman', serif" font-size="18">Have a space in mind?</text>
+        <text x="732" y="612" fill="#B7A896" font-size="8">Let's make it feel like home.</text>
+        <circle cx="978" cy="596" r="20" fill="#B45309"/>
+        <path d="M970 596h16M979 589l7 7-7 7" stroke="#F7F2EA" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <text x="52" y="680" fill="#8C7A66" font-size="8" letter-spacing="1.2">COPENHAGEN · NEW YORK</text>
+      <text x="930" y="680" fill="#8C7A66" font-size="8" letter-spacing="1.2">EST. 2014</text>
+    </g>
+  </g>
+
+  <rect width="1200" height="800" filter="url(#grain-atelier)" opacity=".045" style="mix-blend-mode:overlay"/>
+</svg>

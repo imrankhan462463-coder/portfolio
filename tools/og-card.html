@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imran — social card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      position: relative;
+      background: #080b16;
+      color: #f6f5ff;
+      font-family: "Inter", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(700px 500px at 82% 18%, rgba(139, 92, 246, .33), transparent 62%),
+        radial-gradient(600px 420px at 96% 92%, rgba(6, 182, 212, .17), transparent 60%),
+        radial-gradient(520px 420px at 4% 100%, rgba(139, 92, 246, .13), transparent 65%),
+        #080b16;
+    }
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse at 50% 50%, #000 15%, transparent 78%);
+    }
+    .grain {
+      position: absolute;
+      inset: 0;
+      opacity: .25;
+      background-image: radial-gradient(rgba(255,255,255,.25) .5px, transparent .5px);
+      background-size: 4px 4px;
+      mix-blend-mode: overlay;
+    }
+    .frame {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 54px 62px 46px;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 12px;
+      background: linear-gradient(145deg, #8b5cf6, #5b35d5);
+      box-shadow: 0 10px 30px rgba(139,92,246,.4);
+    }
+    .mark svg { width: 20px; height: 20px; }
+    .brand strong {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 18px;
+      letter-spacing: -.02em;
+    }
+    .brand span {
+      display: block;
+      margin-top: 3px;
+      color: #8f93ab;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+    .available {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 15px;
+      border: 1px solid rgba(52, 211, 153, .28);
+      border-radius: 999px;
+      background: rgba(52, 211, 153, .08);
+      color: #a7f3d0;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .available i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 0 4px rgba(52,211,153,.14);
+    }
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+      align-items: center;
+      gap: 34px;
+      margin-top: 6px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #a6a9bf;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 26px;
+      height: 1px;
+      background: #8b5cf6;
+    }
+    h1 {
+      max-width: 11ch;
+      margin: 18px 0 0;
+      font-family: "Sora", sans-serif;
+      font-size: 58px;
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: .99;
+    }
+    h1 em {
+      color: #b9a4ff;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 65px;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -.015em;
+    }
+    .role {
+      margin-top: 22px;
+      color: #a1a1aa;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: .01em;
+    }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .chips span {
+      padding: 7px 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 7px;
+      background: rgba(255,255,255,.045);
+      color: #c8c9d9;
+      font-size: 10px;
+      font-weight: 500;
+    }
+    .visual {
+      position: relative;
+      height: 330px;
+    }
+    .shot {
+      position: absolute;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 12px;
+      background: #101629;
+      box-shadow: 0 34px 70px rgba(0,0,0,.5);
+    }
+    .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .shot--back {
+      top: 8px;
+      right: 0;
+      width: 310px;
+      height: 205px;
+      transform: rotate(5deg);
+      opacity: .72;
+    }
+    .shot--front {
+      left: -4px;
+      bottom: 2px;
+      width: 356px;
+      height: 238px;
+      transform: rotate(-3deg);
+    }
+    .shot__bar {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 18px;
+      padding: 0 8px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.04);
+    }
+    .shot__bar i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.3); }
+    .shot__img {
+      height: calc(100% - 18px);
+      overflow: hidden;
+    }
+    .float {
+      position: absolute;
+      left: 26px;
+      top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 10px 13px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 10px;
+      background: rgba(12, 16, 27, .84);
+      box-shadow: 0 16px 34px rgba(0,0,0,.36);
+      backdrop-filter: blur(10px);
+    }
+    .float svg { width: 15px; height: 15px; color: #67e8f9; }
+    .float strong { display: block; font-size: 10px; font-weight: 600; }
+    .float span { display: block; color: #8f93ab; font-size: 8.5px; }
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .url {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #c8c9d9;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .url svg { width: 13px; height: 13px; color: #8b5cf6; }
+    .stats {
+      display: flex;
+      gap: 26px;
+    }
+    .stats div { text-align: right; }
+    .stats strong {
+      display: block;
+      font-family: "Sora", sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+    .stats span {
+      display: block;
+      margin-top: 2px;
+      color: #7f849c;
+      font-size: 8.5px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grid"></div>
+  <div class="grain"></div>
+
+  <div class="frame">
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5 14 9l6.5 2-6.5 2-2 6.5L10 13l-6.5-2L10 9l2-6.5Z" fill="#fff"/></svg>
+        </span>
+        <span><strong>imran.</strong><span>Design &amp; WordPress</span></span>
+      </div>
+      <span class="available"><i></i> Available for projects</span>
+    </header>
+
+    <div class="content">
+      <div>
+        <span class="eyebrow">Web designer &amp; WordPress developer</span>
+        <h1>Websites that <em>feel effortless.</em></h1>
+        <p class="role">Design, development and the details in between.</p>
+        <div class="chips">
+          <span>Custom WordPress</span>
+          <span>WooCommerce</span>
+          <span>Product UI</span>
+          <span>Performance</span>
+        </div>
+      </div>
+
+      <div class="visual" aria-hidden="true">
+        <div class="shot shot--back">
+          <div class="shot__bar"><i></i><i></i><i></i></div>
+          <div class="shot__img"><img src="../assets/images/projects/project-pulseboard.svg" alt=""></div>
+        </div>
+        <div class="shot shot--front">
+          <div class="shot__bar"><i></i><i></i><i></i></div>
+          <div class="shot__img"><img src="../assets/images/projects/project-lumen.svg" alt=""></div>
+        </div>
+        <div class="float">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Design → Code</strong><span>Pixel-considered builds</span></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bottom">
+      <span class="url">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 9h17M3.5 15h17M12 3c2.5 2.5 3.8 5.6 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3Z" stroke="currentColor" stroke-width="1.5"/></svg>
+        imran.dev
+      </span>
+      <div class="stats">
+        <div><strong>6</strong><span>Concept projects</span></div>
+        <div><strong>8</strong><span>Core skills</span></div>
+        <div><strong>6</strong><span>Services</span></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

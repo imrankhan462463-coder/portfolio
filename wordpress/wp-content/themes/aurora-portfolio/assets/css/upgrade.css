@@ -1,0 +1,855 @@
+/* ==========================================================================
+   IMRAN — PORTFOLIO
+   Upgrade layer
+   --------------------------------------------------------------------------
+   Styles for the profile hero card, technology logo grid, "Why choose me"
+   section, honest testimonial empty state and the expanded contact form.
+   Loaded after the core stylesheets so it can extend them safely.
+   ========================================================================== */
+
+/* ==========================================================================
+   HERO — PROFILE CARD
+   ========================================================================== */
+.hero-scene--profile {
+  aspect-ratio: 1 / 1.02;
+}
+
+.profile-card {
+  position: absolute;
+  top: 5%;
+  left: 8%;
+  right: 8%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  background:
+    radial-gradient(ellipse 90% 55% at 100% 0%, rgba(139, 92, 246, 0.14), transparent 60%),
+    linear-gradient(165deg, rgba(18, 24, 45, 0.94), rgba(8, 12, 23, 0.96));
+  box-shadow:
+    0 42px 90px rgba(0, 0, 0, 0.52),
+    0 1px 0 rgba(255, 255, 255, 0.08) inset;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.08);
+  pointer-events: none;
+}
+
+.profile-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3.35;
+  overflow: hidden;
+  background: #0c1122;
+}
+
+.profile-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transition: transform 1s var(--ease-out);
+}
+
+.profile-card:hover .profile-card__media img {
+  transform: scale(1.03);
+}
+
+.profile-card__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(6, 9, 18, 0.18), transparent 38%, rgba(6, 9, 18, 0.66)),
+    linear-gradient(90deg, rgba(6, 9, 18, 0.24), transparent 42%);
+  pointer-events: none;
+}
+
+.profile-card__status {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 12px;
+  border: 1px solid rgba(52, 211, 153, 0.26);
+  border-radius: var(--radius-pill);
+  background: rgba(8, 20, 20, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #c8f7e4;
+  font-size: 9.5px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.profile-card__status i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+  animation: pulse-dot 2.2s infinite;
+}
+
+.profile-card__mark {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(8, 12, 24, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.profile-card__body {
+  position: relative;
+  z-index: 2;
+  padding: 16px 20px 18px;
+}
+
+.profile-card__eyebrow {
+  color: var(--violet-soft);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.profile-card__body h2 {
+  margin-top: 5px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2vw, 24px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.profile-card__role {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1.45;
+}
+
+.profile-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 13px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.profile-card__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  color: var(--muted-2);
+  font-size: 9.5px;
+  line-height: 1.4;
+}
+
+.profile-card__location svg {
+  width: 13px;
+  height: 13px;
+  flex: none;
+  color: var(--cyan-soft);
+}
+
+.profile-card__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--muted);
+  transition: color 0.3s, border-color 0.3s, background-color 0.3s, transform 0.3s var(--ease-out);
+}
+
+.profile-card__link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.profile-card__link:hover {
+  color: #fff;
+  border-color: rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.14);
+  transform: translateY(-2px);
+}
+
+/* Keep the floating chips legible around the profile card. */
+.hero-scene--profile .float-card--wp {
+  top: 2%;
+  left: -6%;
+}
+
+.hero-scene--profile .float-card--speed {
+  right: -6%;
+  bottom: 24%;
+}
+
+.hero-scene--profile .float-card--figma {
+  left: -5%;
+  bottom: 9%;
+}
+
+/* ==========================================================================
+   ABOUT — PHOTO CROP
+   ========================================================================== */
+.about__photo img {
+  object-position: center 20%;
+}
+
+/* ==========================================================================
+   SKILLS — TECHNOLOGY LOGO CARDS
+   ========================================================================== */
+.skills__panel--tech {
+  padding: clamp(20px, 2.6vw, 30px);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding-block: 22px;
+}
+
+.tech-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.022);
+  overflow: hidden;
+  transition:
+    transform 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-soft),
+    background-color 0.35s var(--ease-soft),
+    box-shadow 0.35s var(--ease-soft);
+}
+
+.tech-card::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--tech, var(--violet)), transparent 68%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-soft);
+  pointer-events: none;
+}
+
+.tech-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.3);
+  background: rgba(255, 255, 255, 0.042);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+.tech-card:hover::after {
+  opacity: 0.1;
+}
+
+.tech-card__logo {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--tech, var(--violet-soft));
+  transition: transform 0.35s var(--ease-out), border-color 0.35s;
+}
+
+.tech-card__logo svg {
+  width: 25px;
+  height: 25px;
+}
+
+.tech-card:hover .tech-card__logo {
+  transform: scale(1.06) rotate(-3deg);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.tech-card__text {
+  position: relative;
+  z-index: 1;
+  display: block;
+  min-width: 0;
+}
+
+.tech-card__text strong,
+.tech-card__text small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.35;
+}
+
+.tech-card__text strong {
+  color: var(--text-soft);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.tech-card__text small {
+  color: var(--muted-2);
+  font-size: 8.5px;
+}
+
+/* ==========================================================================
+   WHY CHOOSE ME
+   ========================================================================== */
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.why-card {
+  position: relative;
+  padding: 26px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.034), rgba(255, 255, 255, 0.008));
+  overflow: hidden;
+  transition:
+    transform 0.45s var(--ease-out),
+    border-color 0.45s var(--ease-soft),
+    box-shadow 0.45s var(--ease-soft);
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -70px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 68%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-soft);
+  pointer-events: none;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.28);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.3);
+}
+
+.why-card:hover::before {
+  opacity: 1;
+}
+
+.why-card__icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: 13px;
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.18), rgba(6, 182, 212, 0.06));
+  color: var(--violet-soft);
+  transition: color 0.4s, transform 0.4s var(--ease-out);
+}
+
+.why-card__icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.why-card:hover .why-card__icon {
+  color: #fff;
+  transform: scale(1.05) rotate(-3deg);
+}
+
+.why-card h3 {
+  position: relative;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.why-card p {
+  position: relative;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12.7px;
+  line-height: 1.7;
+}
+
+.why__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3vw, 34px);
+  margin-top: 38px;
+  padding: 24px clamp(20px, 3vw, 34px);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse 70% 120% at 50% 0%, rgba(139, 92, 246, 0.08), transparent 70%),
+    rgba(255, 255, 255, 0.018);
+}
+
+.why-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 110px;
+  text-align: center;
+}
+
+.why-stat strong {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-stat span {
+  color: var(--muted-2);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.why-stat__divider {
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.14), transparent);
+}
+
+/* ==========================================================================
+   TESTIMONIALS — HONEST EMPTY STATE
+   ========================================================================== */
+.testimonials__empty {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 34px);
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(26px, 3.6vw, 42px);
+  border: 1px dashed rgba(139, 92, 246, 0.28);
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse 65% 120% at 0% 0%, rgba(139, 92, 246, 0.1), transparent 60%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.008));
+  overflow: hidden;
+}
+
+.testimonials__empty::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -90px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1), transparent 68%);
+  pointer-events: none;
+}
+
+.testimonials__empty-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  flex: none;
+  border: 1px solid rgba(139, 92, 246, 0.26);
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.16), rgba(6, 182, 212, 0.06));
+  color: var(--violet-soft);
+}
+
+.testimonials__empty-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.testimonials__empty-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonials__empty-tag {
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: 4px 9px;
+  border: 1px solid rgba(6, 182, 212, 0.22);
+  border-radius: var(--radius-pill);
+  background: rgba(6, 182, 212, 0.06);
+  color: var(--cyan-soft);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.testimonials__empty h3 {
+  color: #fff;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.testimonials__empty p {
+  max-width: 560px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.testimonials__empty-actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: none;
+}
+
+.testimonials__empty-actions .btn {
+  justify-content: flex-start;
+}
+
+/* ==========================================================================
+   CONTACT — QUICK ACTIONS & SELECT FIELDS
+   ========================================================================== */
+.contact__quick {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.contact__quick-label {
+  display: block;
+  color: var(--muted-2);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact__quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.contact__quick-actions .btn {
+  justify-content: flex-start;
+}
+
+.contact__quick-actions .btn__icon {
+  color: var(--violet-soft);
+}
+
+.field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 38px 13px 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background-color: rgba(255, 255, 255, 0.032);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 19px) calc(50% - 2px),
+    calc(100% - 14px) calc(50% - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.5;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition:
+    border-color 0.3s var(--ease-soft),
+    background-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.field select:hover {
+  border-color: var(--border-strong);
+}
+
+.field select:focus {
+  outline: none;
+  border-color: rgba(139, 92, 246, 0.65);
+  background-color: rgba(139, 92, 246, 0.045);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.field select option {
+  background-color: #0b1020;
+  color: #fff;
+}
+
+.field.is-invalid select {
+  border-color: rgba(248, 113, 113, 0.6);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.08);
+}
+
+.field__optional {
+  color: var(--muted-2);
+  font-weight: 400;
+}
+
+/* Make the optional label sit naturally next to required markers. */
+.field label span + span {
+  margin-left: 2px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tech-card {
+    padding: 10px;
+  }
+
+  .tech-card__logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tech-card__logo svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .tech-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .why__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonials__empty {
+    flex-wrap: wrap;
+  }
+
+  .testimonials__empty-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-scene--profile {
+    aspect-ratio: 1 / 1.06;
+  }
+
+  .profile-card {
+    top: 3%;
+    left: 4%;
+    right: 4%;
+  }
+
+  .profile-card__body {
+    padding: 14px 16px 16px;
+  }
+
+  .profile-card__body h2 {
+    font-size: 20px;
+  }
+
+  .hero-scene--profile .float-card--wp {
+    top: 1%;
+    left: -1%;
+  }
+
+  .hero-scene--profile .float-card--speed {
+    right: -1%;
+    bottom: 22%;
+  }
+
+  .hero-scene--profile .float-card--figma {
+    left: -1%;
+    bottom: 7%;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .why__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .why__stats {
+    justify-content: flex-start;
+  }
+
+  .why-stat {
+    min-width: calc(50% - 20px);
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .why-stat__divider {
+    display: none;
+  }
+
+  .testimonials__empty {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .testimonials__empty-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .testimonials__empty-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact__quick-actions .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .profile-card__mark {
+    width: 32px;
+    height: 32px;
+    font-size: 9.5px;
+  }
+
+  .profile-card__location {
+    font-size: 8.5px;
+  }
+
+  .tech-grid {
+    gap: 8px;
+  }
+
+  .tech-card {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .tech-card__logo {
+    width: 33px;
+    height: 33px;
+    border-radius: 9px;
+  }
+
+  .tech-card__logo svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .tech-card__text strong {
+    font-size: 10.5px;
+  }
+
+  .tech-card__text small {
+    font-size: 8px;
+  }
+
+  .contact__quick-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .contact__quick-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .profile-card__status i {
+    animation: none !important;
+  }
+
+  .profile-card__media img,
+  .tech-card,
+  .tech-card__logo,
+  .why-card,
+  .why-card__icon {
+    transition: none !important;
+  }
+}
