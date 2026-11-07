@@ -301,7 +301,8 @@ if ($loggedIn && ($_POST['action'] ?? '') === 'save_profile') {
         $profile = portfolio_profile();
         $textFields = array(
             'full_name', 'brand_name', 'logo_text', 'title', 'identity', 'phone',
-            'location', 'availability', 'response_time', 'hero_heading', 'linkedin_label',
+            'location', 'location_timezone', 'availability', 'response_time', 'hero_heading',
+            'linkedin_label', 'github_username',
         );
 
         foreach ($textFields as $field) {
@@ -556,9 +557,11 @@ $profileImagePreview = is_file($profileImagePath) ? '../' . $profileImage : '';
           <label class="field"><span>WhatsApp number</span><input type="text" name="whatsapp" value="<?php echo admin_e($profile['whatsapp']); ?>" maxlength="40"></label>
           <label class="field"><span>WhatsApp URL</span><input type="url" name="whatsapp_url" value="<?php echo admin_e($profile['whatsapp_url']); ?>"></label>
           <label class="field field--wide"><span>Location</span><input type="text" name="location" value="<?php echo admin_e($profile['location']); ?>" maxlength="160"></label>
+          <label class="field"><span>Location timezone</span><input type="text" name="location_timezone" value="<?php echo admin_e($profile['location_timezone'] ?? 'Asia/Dhaka'); ?>" maxlength="60" placeholder="Asia/Dhaka"></label>
           <label class="field"><span>LinkedIn URL</span><input type="url" name="linkedin" value="<?php echo admin_e($profile['linkedin']); ?>"></label>
           <label class="field"><span>LinkedIn label</span><input type="text" name="linkedin_label" value="<?php echo admin_e($profile['linkedin_label']); ?>" maxlength="120"></label>
-          <label class="field"><span>GitHub URL (optional)</span><input type="url" name="github" value="<?php echo admin_e($profile['github']); ?>"></label>
+          <label class="field"><span>GitHub URL</span><input type="url" name="github" value="<?php echo admin_e($profile['github']); ?>" placeholder="https://github.com/username"></label>
+          <label class="field"><span>GitHub username</span><input type="text" name="github_username" value="<?php echo admin_e($profile['github_username'] ?? ''); ?>" maxlength="60" placeholder="username"></label>
           <label class="field"><span>Facebook URL (optional)</span><input type="url" name="facebook" value="<?php echo admin_e($profile['facebook']); ?>"></label>
           <label class="field"><span>Instagram URL (optional)</span><input type="url" name="instagram" value="<?php echo admin_e($profile['instagram']); ?>"></label>
           <label class="field"><span>Availability text</span><input type="text" name="availability" value="<?php echo admin_e($profile['availability']); ?>" maxlength="80"></label>

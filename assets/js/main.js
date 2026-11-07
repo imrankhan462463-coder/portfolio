@@ -38,7 +38,10 @@
     phone: "+8801623331050",
     whatsapp_url: "https://wa.me/8801623331050",
     location: "Mirpur 10, Dhaka, Bangladesh",
+    location_timezone: "Asia/Dhaka",
     linkedin: "https://www.linkedin.com/in/imran-sikdar-02183733b",
+    github: "https://github.com/imrankhan462463-coder",
+    github_username: "imrankhan462463-coder",
     profile_image: "assets/images/imran.jpg",
     resume: "assets/files/imran-cv.pdf",
     availability: "Available for new projects",
@@ -144,6 +147,7 @@
     });
 
     window.portfolioProfile = data;
+    document.dispatchEvent(new CustomEvent("portfolio:profile-ready", { detail: data }));
   };
 
   const embeddedData = window.auroraPortfolio || null;
